@@ -1,0 +1,106 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 50px 50px; /* Added extra padding at the top */
+  
+  position: relative;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 70px; /* Increased spacing */
+  text-align: center;
+  position: relative; /* Changed from absolute to relative */
+  animation: fadeIn 1s forwards ease-out 0.5s;
+  background: linear-gradient(90deg, #32b5e4, 
+  
+  #c5aeea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Layout Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+}
+
+/* Social Links (Left Side, Horizontal) */
+
+.social-links {
+  display: flex;
+  gap: 25px;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+  
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #00d8ff;
+}
+
+/* Contact Form (Right Side) */
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  animation: border-glow 3s infinite linear;
+  
+}
+
+@keyframes border-glow {
+  0% { box-shadow: 0 0 10px #007bff; }
+  50% { box-shadow: 0 0 20px #00ff99; }
+  100% { box-shadow: 0 0 10px #007bff; }
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #00d8ff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #303738;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00d8ff;
+}

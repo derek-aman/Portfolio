@@ -1,0 +1,134 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    
+   
+}
+
+
+
+/* Left Section */
+.hero-left {
+    max-width: 500px;
+    color: white;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeIn 1s forwards ease-out;
+}
+
+.hero-left h1 {
+    font-size: 3rem;
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 21%, rgba(253,187,45,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Ensures text remains visible */
+    margin-left: 50px;
+    white-space: nowrap; /* Prevents unwanted line breaks */
+}
+
+
+.hero-left p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.8;
+    margin-left: 50px;
+    
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+/* .hero-buttons a {
+    background-color:#5fb3e2;
+border-radius: 20px;
+} */
+
+.hero-buttons a :hover.star{
+    display: block;
+    filter: drop-shadow(0 0 10px)
+    #5fb3e2
+}
+
+
+
+
+
+.btn {
+    padding: 10px 20px;
+    background-color:#5fb3e2;
+    
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.project-btn {
+    background-color:#5fb3e2;
+    
+    color: white;
+}
+
+.project-btn:hover {
+    background-color:#5fb3e2;
+   
+}
+
+.resume-btn {
+    background-color:#5fb3e2;
+  
+    color: white;
+}
+
+.resume-btn:hover {
+    background-color:#5fb3e2;
+}
+
+/* Right Section */
+.hero-right img {
+    width: 500px;
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 150px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeIn 1s forwards ease-out 0.5s;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .hero-left {
+        transform: translateX(0);
+        animation: fadeIn 1s forwards ease-out;
+    }
+
+    .hero-right img {
+        width: 250px;
+        transform: translateY(20px);
+    }
+}

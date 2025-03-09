@@ -1,0 +1,75 @@
+.skills {
+    text-align: center;
+    padding: 100px 10%;
+    margin-top: 60px;
+    animation: autoShowAnimation;
+    animation-timeline: view(70% 5%);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(100,167,228,1) 81%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translate(20px) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0) scale(1);
+    }
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 0.1); /* Keeps card background grey */
+    text-align: center;
+    width: 120px;
+    color: #c9d5dd;
+    transition: transform 0.3s;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: border-glow 3s infinite linear;
+}
+
+@keyframes border-glow {
+    0% { box-shadow: 0 0 10px #007bff; }
+    50% { box-shadow: 0 0 20px #00ff99; }
+    100% { box-shadow: 0 0 10px #007bff; }
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icons Styling (Only Icons Have Colors) */
+.icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Icon Colors */
+.icon.html { color: #e44d26; }
+.icon.css { color: #1572b6; }
+.icon.js { color: #f7df1e; }
+.icon.react { color: #61dafb; }
+.icon.node { color: #3c873a; }
+.icon.express { color: #857070; }
+.icon.mongo { color: #47a248; }
+.icon.sql { color: #00758f; }

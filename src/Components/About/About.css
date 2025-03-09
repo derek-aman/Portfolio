@@ -1,0 +1,88 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 10%;
+    margin-top: 60px;
+    
+   
+
+ 
+    
+}
+
+
+
+/* Left side image */
+.about-left img {
+    align-items: center;
+    width: 350px;
+    height: 380px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 90px;
+    animation: autoShowAnimation;
+    animation-timeline: view(70% 5%);
+    
+}
+
+/* Right side bio */
+.about-right {
+    max-width: 500px;
+    height: 380px;
+   
+}
+
+.about-right h2 {
+    font-size: 2.5rem;
+   
+    margin-bottom: 15px;
+    color: white;
+    background: #7ad1db;
+ background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    animation: autoShowAnimation;
+    animation-timeline: view(70% 5%);
+
+}
+
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translate(20px) scale(0);
+    }to{
+        opacity: 1;
+        transform: translate(0) scale(1); 
+    }
+}
+
+
+.about-right p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 80%;
+    animation: autoShowAnimation;
+    animation-timeline: view(70% 5%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-left img {
+        width: 200px;
+        height: 220px;
+    }
+
+    .about-right h2 {
+        font-size: 2rem;
+    }
+} 
