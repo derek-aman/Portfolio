@@ -13,14 +13,23 @@ import SkillsScroll from './Components/SkillsScroll/SkillsScroll.jsx'
 const App = () => {
   return (
     <div>
-      
       <Navbar />
+      <section id="home">
       <Hero />
+      </section>
+      <section id="about">
       <About/>
-      <SkillsScroll/>
-      <Skills/>
+      </section>
+     <SkillsScroll/>
+     <section id="skills">
+     <Skills/>
+      </section>
+      <section id="projects">
       <Projects/>
+      </section>
+      <section id="contact">
       <Contact />
+      </section>
       <Footer />
       
     </div>
