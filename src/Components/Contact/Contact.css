@@ -1,25 +1,22 @@
+/* Contact Section */
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 50px 50px; /* Added extra padding at the top */
-  
+  padding: 80px 50px 50px;
   position: relative;
 }
 
+/* Contact Title */
 .contact-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 70px; /* Increased spacing */
+  margin-bottom: 40px;
   text-align: center;
-  position: relative; /* Changed from absolute to relative */
-  animation: fadeIn 1s forwards ease-out 0.5s;
-  background: linear-gradient(90deg, #32b5e4, 
-  
-  #c5aeea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #32b5e4, #c5aeea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Layout Container */
@@ -29,20 +26,22 @@
   align-items: center;
   width: 80%;
   max-width: 1000px;
+  gap: 20px;
 }
 
-/* Social Links (Left Side, Horizontal) */
-
+/* Social Links (Left Side) */
 .social-links {
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .icon {
   font-size: 2.5rem;
   color: #333;
   transition: transform 0.3s ease, color 0.3s ease;
-  
 }
 
 .icon:hover {
@@ -57,25 +56,13 @@
   border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  animation: border-glow 3s infinite linear;
-  
+  width: 90%;
+  max-width: 400px;
 }
 
-@keyframes border-glow {
-  0% { box-shadow: 0 0 10px #007bff; }
-  50% { box-shadow: 0 0 20px #00ff99; }
-  100% { box-shadow: 0 0 10px #007bff; }
-}
-
-@keyframes fadeIn {
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-input, textarea {
+/* Form Fields */
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -85,10 +72,12 @@ input, textarea {
   transition: 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #00d8ff;
 }
 
+/* Submit Button */
 button {
   width: 100%;
   padding: 10px;
@@ -103,4 +92,28 @@ button {
 
 button:hover {
   background-color: #00d8ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .social-links {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    width: 100%;
+  }
 }
